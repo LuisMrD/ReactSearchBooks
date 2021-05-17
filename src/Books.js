@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import SearchArea from './SearchArea';
-import request from 'superagent';
+import request from 'axios';
 
 class Books extends Component {
     constructor(props){
@@ -11,13 +11,11 @@ class Books extends Component {
         }
     }
 
-    searchBook = () => {
-        request
-            .get("https://www.googleapis.com/books/v1/volumes")
-            .query({q: this.searchField})
-            .then((data) => {
-                console.log(data);
-            })
+    searchBook = (e) => {
+        e.preventDefault()
+        const url = "https://www.googleapis.com/books/v1/volumes?q="
+        request.get(url + this.state.searchField)
+          .then(data => console.log(data))
     }
 
     handleSearch = (e) => {
@@ -27,7 +25,7 @@ class Books extends Component {
     render(){
         return (
         <div>
-            <SearchArea handleSearch={this.handleSearch}/>
+            <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch}/>
         </div>
         )
     }
