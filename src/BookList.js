@@ -10,7 +10,6 @@ const BookList = (props) => {
                     if(typeof thumb != 'undefined'){
                         thumb = book.volumeInfo.imageLinks.thumbnail;
                     }else {
-                        //thumb = 'https://a-static.mlcdn.com.br/574x431/livro-mal-da-terra/ludylivros/9788577530052/6f32dc7781463b4e1dd866ef1c1cbe9b.jpg';
                         thumb = 'https://d1pkzhm5uq4mnt.cloudfront.net/imagens/capas/822a5d14da9a2c8b035750e0f1838e2c186360a9.jpg';
                     }
 

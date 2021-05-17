@@ -9,7 +9,9 @@ class Books extends Component {
         super(props);
         this.state = {
             books: [],
-            searchField: ''
+            searchField: '',
+            displayBookList: false,
+            displayBookFavList: false,
         }
     }
 
@@ -21,19 +23,26 @@ class Books extends Component {
               this.setState({ books: [data.data.items][0]})
               console.log(this.state.books)
           })
+        this.setState({ displayBookList: true})
+        this.setState({ displayBookFavList: false})
     }
 
     handleSearch = (e) => {
-        this.setState({ searchField: e.target.value})
+        this.setState({ searchField: e.target.value})        
+    }
+
+    handleFavBooks = () => {
+        this.setState({ displayBookFavList: true})
+        this.setState({ displayBookList: false})
     }
 
     render(){
         return (
-        <div>
-            <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch}/>
-            <BookList books={this.state.books}/>
-            <BookFavList favBooks={this.state.favBooks}/>
-        </div>
+            <div>
+                <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} handleFavBooks={this.handleFavBooks}/>
+                {this.state.displayBookFavList === true ? <BookFavList displayBookFavList={this.state.displayBookFavList}/> : null}
+                {this.state.displayBookList === true ? <BookList books={this.state.books} displayBookList={this.state.displayBookList}/> : null}                
+            </div>
         )
     }
 }
