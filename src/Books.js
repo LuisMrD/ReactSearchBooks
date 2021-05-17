@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import SearchArea from './SearchArea';
 import request from 'axios';
 import BookList from './BookList';
+import BookFavList from './BookFavList';
 
 class Books extends Component {
     constructor(props){
@@ -31,6 +32,7 @@ class Books extends Component {
         <div>
             <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch}/>
             <BookList books={this.state.books}/>
+            <BookFavList favBooks={this.state.favBooks}/>
         </div>
         )
     }

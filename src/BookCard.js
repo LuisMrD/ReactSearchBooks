@@ -1,7 +1,7 @@
 import React from 'react';
 
 function addFavBook(image, title, date, desc, link){
-    var bookInfos = {image: image, title: title, date: date, desc: desc, link: link}
+    var bookInfos = {image: image, title: title, published: date, description: desc, link: link}
     localStorage.setItem(link, JSON.stringify(bookInfos));
 }
 
