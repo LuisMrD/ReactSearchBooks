@@ -13,7 +13,7 @@ const BookCard = (props) => {
                 <h2>Título: {props.title}</h2>
                 <h3>Ano: {props.published}</h3>
                 <p>Descrição: {props.description}</p>
-                <input onClick={() => addFavBook(props.image, props.title, props.published, props.description, props.link)} type="checkbox" />
+                Favoritar<input onClick={() => addFavBook(props.image, props.title, props.published, props.description, props.link)} type="checkbox" />
             </div>
         </div>
     )

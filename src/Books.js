@@ -18,10 +18,10 @@ class Books extends Component {
     searchBook = (e) => {
         e.preventDefault(); 
         const url = "https://www.googleapis.com/books/v1/volumes?q="
-        request.get(url + this.state.searchField.replaceAll(' ', '+'))
+        request.get(url + this.state.searchField.replaceAll(' ', '+') + '&maxResults=40')
           .then(data => {
               this.setState({ books: [data.data.items][0]})
-              console.log(this.state.books)
+              console.log(this.data)
           })
         this.setState({ displayBookList: true})
         this.setState({ displayBookFavList: false})
