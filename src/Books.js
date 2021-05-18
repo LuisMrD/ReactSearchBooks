@@ -3,6 +3,7 @@ import SearchArea from './SearchArea';
 import request from 'axios';
 import BookList from './BookList';
 import BookFavList from './BookFavList';
+import Header from './Header';
 
 class Books extends Component {
     constructor(props){
@@ -38,7 +39,8 @@ class Books extends Component {
 
     render(){
         return (
-            <div>
+            <div>                
+                <Header handleFavBooks={this.handleFavBooks}/>
                 <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} handleFavBooks={this.handleFavBooks}/>
                 {this.state.displayBookFavList === true ? <BookFavList displayBookFavList={this.state.displayBookFavList}/> : null}
                 {this.state.displayBookList === true ? <BookList books={this.state.books} displayBookList={this.state.displayBookList}/> : null}                
