@@ -1,4 +1,5 @@
 import React from 'react';
+import FavStar from './FavStar';
 
 function addFavBook(image, title, date, desc, link){
     var bookInfos = {image: image, title: title, published: date, description: desc, link: link}
@@ -7,14 +8,18 @@ function addFavBook(image, title, date, desc, link){
 
 const BookCard = (props) => {
     return (
-        <div className="card-container">
-            <a href={props.link} target="_blank" rel="noreferrer"><img src={props.image} alt=""/></a>
-            <div className="desc">
-                <h2>Título: {props.title}</h2>
-                <h3>Ano: {props.published}</h3>
-                <p>Descrição: {props.description}</p>
-                Favoritar<input onClick={() => addFavBook(props.image, props.title, props.published, props.description, props.link)} type="checkbox" />
+        <div className="card">
+            <div className="card-cover">
+                <a href={props.link} target="_blank" rel="noreferrer"><img src={props.image} alt="" className="card-img"/></a>
             </div>
+            <div className="card-description">
+                <h2 className="card-title">{props.title}</h2>
+                <h3 className="card-text">Ano: {props.published}</h3>
+                <p className="card-text">Descrição: {props.description}</p>                
+            </div>
+            <div className="card-favorite">
+                <span onClick={() => addFavBook(props.image, props.title, props.published, props.description, props.link)}><FavStar/></span>
+            </div>            
         </div>
     )
 }

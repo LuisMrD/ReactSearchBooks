@@ -2,8 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header>
-            <i className="fas fa-book fa-2x"></i>
+        <header className="title-page">
             <h1>Search Books</h1>
         </header>
     )

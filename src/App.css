@@ -7,11 +7,100 @@ header {
   padding: 30px 0 30px 0;
   background: #343a40;
   color: #fff;
-  text-align: center;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
 header h1 {
-  display: inline;
   margin-left: 15px;
   font-weight: 300;
+  margin: auto;
 }
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 30px;
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+.card {
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 6px; */
+  display: inline-block;
+  width: 299px;
+  height: 507px;
+  box-shadow: 0 0 20px #aaa;
+  margin: 25px;
+  vertical-align: top;
+  position: relative;
+}
+
+.card-cover {
+  border: 2px solid gray;
+  height: 60%;
+  overflow: hidden;
+  background: darkgray;
+}
+
+.card-img {
+  /* width: 150px; */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+}
+
+.card-description {
+  width: 100%;
+  padding: 10px;
+}
+
+.card-title { 
+  font-family: 'Enriqueta', arial, serif; 
+  line-height: 1.25; 
+  margin: 0 0 5px; 
+  font-size: 20px; 
+  font-weight: bold; 
+}
+
+.card-text {
+  color: #333333;
+  font-family: "Helvetica Neue",Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.card-favorite {
+  position: absolute;
+  bottom: 3px;
+  margin-left: 270px;
+}
+
+.void-star {
+  color: rgb(87, 83, 83);
+}
+
+.fill-star {
+  color: rgb(52, 7, 216);
+}
+
+.search-area {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+

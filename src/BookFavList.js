@@ -15,7 +15,7 @@ function getFavBooks(){
 const BookFavList = () => {
     var favBooks = getFavBooks();
     return (
-        <div className="list">
+        <div className="card-container">
             {
                 favBooks.map((book, i) => {
                     return <BookCard
