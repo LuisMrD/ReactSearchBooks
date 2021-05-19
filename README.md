@@ -1,7 +1,9 @@
-Para iniciar o projeto basta fazer o clone, e então dentro de seu diretório rodar os comandos:
+#RactSearchBooks
+##Overview
+This project was developed in three days for a tech test, and consist to search and list books, integrating whit the Google Books APIs, and implements functionalities like pagination to navigate between the result pages and add books to favorites to filter and then show these books at a favorite book list. This is my first contact with React JS framework, so take it easy ok?    
 
-npm install
+##Instalation
+Node.JS, and NPM are required to RactSearchBooks. To install this project you must run in your terminal or prompt (If you use Windows) the typical: 'npm install.'
 
-npm start
-
-O primeiro comando vai baixar as dependências do projeto e o segundo vai iniciá-lo.
+##Execution/Run
+'npm start'
