@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was developed in three days for a tech test, and consist to search and list books, integrating whit the Google Books APIs, and implements functionalities like pagination to navigate between the result pages and add books to favorites to filter and then show these books at a favorite book list. This is my first contact with React JS framework, so take it easy ok?    
+This project was developed in three days for a tech test, and consist to search and list books, integrating whith the Google Books APIs, and implements functionalities like pagination to navigate between the result pages and add books to favorites to filter and then show these books at a favorite book list. This is my first contact with React JS framework, so take it easy.    
 
 
 ## Instalation
