@@ -62,8 +62,8 @@ body {
 
 .card-title { 
   font-family: 'Enriqueta', arial, serif; 
-  line-height: 1.25; 
-  margin: 0 0 5px; 
+  line-height: 1.10; 
+  margin: 0 0 5px;
   font-size: 20px; 
   font-weight: bold; 
 }
@@ -71,7 +71,7 @@ body {
 .card-text {
   color: #333333;
   font-family: "Helvetica Neue",Arial,sans-serif;
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 6px;
