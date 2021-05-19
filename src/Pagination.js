@@ -50,7 +50,7 @@ class Pagination extends React.Component {
         this.setState({ pager: pager });
 
 
-        this.props.onChangePage(pageOfItems);
+        this.props.onChangePage(pageOfItems, pager.currentPage);
     }
 
     getPager(totalItems, currentPage, pageSize) {

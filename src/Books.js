@@ -24,46 +24,11 @@ class Books extends Component {
         this.onChangePage = this.onChangePage.bind(this);
     }
 
-    onChangePage(pageOfItems) {
+    onChangePage(pageOfItems, currentPage) {
 
         this.setState({ pageOfItems: pageOfItems });
-
-        var currentPag = this.state.pagerInfo[this.state.pagerInfo.length -1];
-
-        this.setState({currentPage: currentPag.currentPage})
-
-        if( this.state.books.length !== 0){
-
-            let renderBooks = {}
-            switch(this.state.currentPage){
-                case 0:
-                    renderBooks = {startIndex: 0, endIndex: 8}
-                    break;
-                case 1:
-                    renderBooks = {startIndex: 9, endIndex: 17}
-                    break;
-                case 2:
-                    renderBooks = {startIndex: 18, endIndex: 26}
-                    break;
-                case 3:
-                    renderBooks = {startIndex: 27, endIndex: 35}
-                    break;
-                case 4:
-                    renderBooks = {startIndex: 36, endIndex: 44}
-                    break;
-                case 5:
-                    renderBooks = {startIndex: 45, endIndex: 53}
-                    break;
-                default:
-                    renderBooks = {startIndex: 0, endIndex: 8}
-                    break;
-            }
-            this.state.items = [];
-            for(let i = renderBooks.startIndex; i <= renderBooks.endIndex; i++){
-                this.state.items.push(this.state.books[i])
-            }
-
-        }
+        this.setState({ currentPage: currentPage });
+        
     }
 
     searchBook = (e) => {
@@ -88,7 +53,38 @@ class Books extends Component {
         this.setState({ displayBookList: false})
     }
 
+    
+
     render(){
+        if( this.state.books.length !== 0){
+
+            let renderBooks = {}
+            switch(this.state.currentPage){
+                case 1:
+                    renderBooks = {startIndex: 0, endIndex: 8}
+                    break;
+                case 2:
+                    renderBooks = {startIndex: 9, endIndex: 17}
+                    break;
+                case 3:
+                    renderBooks = {startIndex: 18, endIndex: 26}
+                    break;
+                case 4:
+                    renderBooks = {startIndex: 27, endIndex: 35}
+                    break;
+                case 5:
+                    renderBooks = {startIndex: 36, endIndex: 39}
+                    break;
+                default:
+                    renderBooks = {startIndex: 0, endIndex: 8}
+                    break;
+            }
+            this.state.items = [];
+            for(let i = renderBooks.startIndex; i <= renderBooks.endIndex; i++){
+                this.state.items.push(this.state.books[i])
+            }
+
+        }
         return (
             <div>                
                 <Header handleFavBooks={this.handleFavBooks}/>
